@@ -12,12 +12,13 @@ import cloudinary.uploader
 import datetime
 import random
 import requests
+import os
 
 
 cloudinary.config( 
-  cloud_name = "dfl1tke7p", 
-  api_key = "429114478873919", 
-  api_secret = "yp6A6ArPMghU4hNsl_DciDmnPsA" 
+  cloud_name = os.environ.get('CLOUD_NAME'), 
+  api_key = os.environ.get('API_KEY'), 
+  api_secret = os.environ.get('API_SECRET')
 )
 clase_actual=-1 #iniciamos con una clase inexistente
 ult_tiempo = time.time()
